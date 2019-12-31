@@ -18,7 +18,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lenovo/TBX704
 
 PRODUCT_COPY_FILES += \
-    vendor/lenovo/TBX704/proprietary/vendor/bin/gx_fpd:$(TARGET_COPY_OUT_VENDOR)/bin/gx_fpd \
     vendor/lenovo/TBX704/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/lenovo/TBX704/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
     vendor/lenovo/TBX704/proprietary/vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
@@ -63,10 +62,16 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TBX704/proprietary/vendor/firmware/variant/msm/goodixfp.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/variant/msm/goodixfp.b06 \
     vendor/lenovo/TBX704/proprietary/vendor/firmware/variant/apq/goodixfp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/variant/apq/goodixfp.mdt \
     vendor/lenovo/TBX704/proprietary/vendor/firmware/variant/msm/goodixfp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/variant/msm/goodixfp.mdt \
-    vendor/lenovo/TBX704/proprietary/vendor/lib64/hw/fingerprint.msm8953.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.msm8953.so \
-    vendor/lenovo/TBX704/proprietary/vendor/lib64/hw/gxfingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gxfingerprint.default.so \
-    vendor/lenovo/TBX704/proprietary/vendor/lib64/libfp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfp_client.so \
-    vendor/lenovo/TBX704/proprietary/vendor/lib64/libfpservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfpservice.so \
+    vendor/lenovo/TBX704/proprietary/lib64/hw/gf_fingerprint.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/gf_fingerprint.default.so \
+    vendor/lenovo/TBX704/proprietary/lib64/libgf_algo.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgf_algo.so \
+    vendor/lenovo/TBX704/proprietary/lib64/libgf_ca.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgf_ca.so \
+    vendor/lenovo/TBX704/proprietary/lib64/libgf_hal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgf_hal.so \
+    vendor/lenovo/TBX704/proprietary/lib64/libgoodixfingerprintd_binder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgoodixfingerprintd_binder.so \
+    vendor/lenovo/TBX704/proprietary/lib64/libsoftkeymaster.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsoftkeymaster.so \
+    vendor/lenovo/TBX704/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.lenovo_tbx704:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.lenovo_tbx704 \
+    vendor/lenovo/TBX704/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.lenovo_tbx704.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.lenovo_tbx704.rc \
+    vendor/lenovo/TBX704/proprietary/vendor/etc/permissions/com.fingerprints.extension.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.fingerprints.extension.xml \
+    vendor/lenovo/TBX704/proprietary/vendor/framework/com.fingerprints.extension.jar:$(TARGET_COPY_OUT_VENDOR)/framework/com.fingerprints.extension.jar \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libactuator_dw9718.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_dw9718.so \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libactuator_ofilm_imx219_dw9718.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ofilm_imx219_dw9718.so \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libactuator_pseudo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_pseudo.so \
@@ -301,7 +306,11 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
     vendor/lenovo/TBX704/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
-    vendor/lenovo/TBX704/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so
+    vendor/lenovo/TBX704/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
+    vendor/lenovo/TBX704/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@1.0.so \
+    vendor/lenovo/TBX704/proprietary/vendor/lib64/hw/fingerprint.goodix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.so \
+    vendor/lenovo/TBX704/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so \
+    vendor/lenovo/TBX704/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 
 PRODUCT_PACKAGES += \
     libts_detected_face_hal \
